@@ -11,29 +11,34 @@
    
    <h1>CADASTRO DE CLIENTE</h1>
    
-   <form>
+   <form action="gravar.php" method="Post">
   <div class="form-group col-md-6">
     <label for="formGroupExampleInput">NOME:</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input exemplo">
+    <input type="text" name="nome" class="form-control" placeholder="Nome">
   </div>
   <div class="form-group col-md-6">
     <label for="formGroupExampleInput2">E-MAIL</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Outro input">
+    <input type="email" name="email" class="form-control" placeholder="Email">
   </div>
   
    <div class="form-group col-md-4">
       <label for="inputEstado">Estado Civil</label>
-      <select id="inputEstado" class="form-control">
-        <option selected>Solteiro</option>
-        <option>Casado</option>
-        <option>Viuvo</option>
-        <option>Divorciado</option>
+      <select name="estadocivil" id="inputEstado" class="form-control">
+        <option value="" disabled selected >Escolha</option>
+        <option value="Solteiro" >Solteiro</option>
+        <option value="Casado"> Casado</option>
+        <option value="Viuvo"> Viuvo</option>
+        <option value="Divorciado"> Divorciado</option>
       </select>
     </div>
     
             <label>Sexo: </label>
-            <input type="radio" value="M"> Masculino
-            <input type="radio" value="F"> Feminino
+            <input type="radio" name="sexo"  value="M"> Masculino
+            <input type="radio" name="sexo" value="F"> Feminino
+            
+    <br>
+                    
+    <input type="submit">        
     
 </form>
     
