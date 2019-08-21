@@ -19,13 +19,29 @@
     echo("<br>");
 
     
-    $con = mysqli_connect("localhost","root", "", "well_com");
+   include_once 'conexao.php';
     
     $sql = "INSERT INTO cliente VALUES(null, '{$nome}', '{$email}', '{$estadocivil}', '{$sexo}')";
 
-   if (mysqli_query($con, $sql)) {
+
+
+    $msg = (mysqli_query($con, $sql))
+        ? "Gravado com Sucesso"
+        : "ERRO";
+
+    header("location:msg.php?variavel=".$msg);
+            
+            
+
+
+
+
+
+
+
+  /* if (mysqli_query($con, $sql)) {
        
-       echo("Gravado com sucesso");
+       header("localhost:msg.php","gravado com sucesso")
        
        
    }
@@ -33,12 +49,13 @@
     else {
         
         
-        echo("boa noite bruno");
+        echo("ERROU");
         
     }
 
 
 
+*/
 
 
 

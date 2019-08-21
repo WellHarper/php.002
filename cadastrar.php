@@ -9,7 +9,7 @@
 
 <body>
    
-   <h1>CADASTRO DE CLIENTE</h1>
+   <h1>CADASTRO DE CLIenTE</h1>
    
    <form action="gravar.php" method="Post">
   <div class="form-group col-md-6">

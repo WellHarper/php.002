@@ -27,7 +27,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(Página atual)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="consultar.php">Consultar</a>
@@ -38,6 +38,13 @@
     </ul>
   </div>
 </nav> 
+  
+  <div>
+      
+      
+      
+      
+  </div>
    
     
     
