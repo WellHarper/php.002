@@ -41,7 +41,17 @@
   
   <div>
       
+      <?php 
       
+      $vari = $_GET['variavel'];
+          
+             
+      
+      
+      
+      ?>
+      
+      <h1><?php echo $vari; ?> !</h1>
       
       
   </div>
