@@ -27,28 +27,22 @@
         
         <hr>
         
-          
-        <?php 
-      //1
-        if(isset($_GET['nome'])) {
-        $nome = $_GET['nome'];
-      //2
-        include_once 'conexao.php';
-      //3
-        $sql = "SELECT * FROM cliente WHERE nome like '{$nome}%'";    
-      //4
-        result = mysqli_query($con, $sql);
+  
             
     
             
                
-    }
-?>     
+    
+    
 
        
        <table class="table">
   <thead>
     <tr>
+   
+     
+     
+     
       <th scope="col">#</th>
       <th scope="col">Nome:</th>
       <th scope="col">Email:</th>
@@ -59,13 +53,74 @@
   <tbody>
    
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>rinha</td>
+       
+        
+                
+        <?php 
+      //1
+        if(isset($_GET['nome'])) {
+        $nome = $_GET['nome'];
+      //2
+        include_once 'conexao.php';
+      //3
+        $sql = "SELECT * FROM cliente WHERE nome like '{$nome}%'";    
+      //4
+        $result = mysqli_query($con, $sql);
+        
+        $TotalRegistros = mysqli_num_rows($result);
+            
+            if ($TotalRegistros > 0) { 
+                
+                echo 'tem caboclo';
+        
+            while($row = mysqli_fetch_array($result)) {
+                
+              
+                
+                
+                
+        
+        
+        
+        ?>
+               
+            
+                                          
+          <th scope="row"></th>
+          <td><?php echo $row[1]; ?></td>
+          <td><?php echo $row[2]; ?></td>
+          <td><?php echo $row[3]; ?></td>
+          <td><?php echo $row[4]; ?></td>
+          
     </tr>
-    <br>
+    
+    <?php }  ?>
+    
+   
+      
+      
+      
+      
+      
+     
+                
+                
+                
+                
+                
+        
+           <?php  
+            }else {
+                
+                echo "Tem ninguém";
+                
+            }
+      
+        
+        }
+        
+       ?>
+     
     
   </tbody>
 </table>
